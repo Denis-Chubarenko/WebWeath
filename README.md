@@ -1,2 +1,2 @@
 # WebWeath
-First commiy
+First commit
