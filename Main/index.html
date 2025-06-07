@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebWeath</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script>
 </head>
 <body>
-    
+  <div class="container">
+    <h1>WebWeath</h1>
+    <input type="text" placeholder="Введите город..." class="search-input" />
+    <div class="weather-card">
+      <h2>Киев</h2>
+      <p class="temperature">+18°C</p>
+      <p class="description">Ясно</p>
+      <div class="details">
+        <span>Влажность: 60%</span>
+        <span>Ветер: 5 м/с</span>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

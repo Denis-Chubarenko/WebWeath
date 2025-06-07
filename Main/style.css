@@ -1,0 +1,44 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.weather-card h2 {
+  margin: 10px 0;
+}
+
+.temperature {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.description {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.details span {
+  display: block;
+  margin: 5px 0;
+}
