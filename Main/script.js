@@ -135,7 +135,7 @@ async function getWeather(lat, lon, cnt) {
     document.querySelectorAll('.frame-23 .div3')[3].innerHTML = `Кількість опадів:&nbsp;&nbsp;${currentRain} мм`;
 
     const iconContainer = document.querySelector('.streamline-ultimate-color-weather-sun');
-    iconContainer.innerHTML = `<img class="img" src="https://openweathermap.org/img/wn/${currentIcon}@2x.png" width="100">`;
+    iconContainer.innerHTML = `<img class="imgMain" src="https://openweathermap.org/img/wn/${currentIcon}@2x.png" width="100">`;
 
     // Прогноз на наступні дні
     daily.slice(0, 5).forEach(day => {
@@ -162,9 +162,9 @@ async function getWeather(lat, lon, cnt) {
           </div>
         </div>
         <div class="second-content">
-          <div class="_30">Вологість: ${humidity}%</div>
+          <div class="_30">Вологість&nbsp;: ${humidity}%</div>
           <div class="_45">Хмарність: ${clouds}%</div>
-          <div class="_7">Шв. вітру: ${wind} м/с</div>
+          <div class="_7">Шв. вітру&nbsp;: ${wind} м/с</div>
         </div>
       `;
       container.appendChild(div);

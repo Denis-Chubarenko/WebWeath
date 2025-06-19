@@ -43,15 +43,16 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 1820px;
+  width: 100%;
   height: 200px;
   position: relative;
 }
 .logo {
-  flex-shrink: 0;
+  flex: 1;
   width: 910px;
   height: 200px;
   position: relative;
+  
   /* overflow: hidden; */
 }
 .group-1 {
@@ -67,19 +68,20 @@
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 910px;
+  width: 100%;
   height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .rectangle {
-  border-radius: 25px;
-  width: 50.69px;
-  height: 50.69px;
-  position: absolute;
-  left: 270.61px;
-  top: 74.66px;
+  /* border-radius: 25px; */
+  width: 50px;
+  height: 50px;
+  position: relative;
+  /* left: 270.61px;
+  top: 74.66px; */
+  /* left: 0; */
   object-fit: cover;
   aspect-ratio: 1;
 }
@@ -103,6 +105,7 @@
   align-self: stretch;
   flex: 1;
   position: relative;
+  min-width: 0;
 }
 
 
@@ -154,6 +157,7 @@
   flex: 1;
   position: relative;
   align-self: stretch;
+  min-width: 0;
 }
 .btn1{
   background: none;
@@ -174,6 +178,7 @@
   flex: 1;
   position: relative;
   cursor: pointer;
+  width: 100%;
 }
 .lists{
   display: none;
@@ -237,6 +242,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;    
+  overflow: hidden;      
+  text-overflow: ellipsis; 
+}
+.div2p{
+  white-space: nowrap;    
+  overflow: hidden;      
+  text-overflow: ellipsis; 
 }
 .weui-arrow-outlined {
   display: flex;
@@ -266,30 +279,33 @@
   
   background: #ffffff;
   border: 2px, solid, #000;
-   border-radius: 30px;
-  /* border-style: solid;
-  border-color: #000000;  */
-  /* border-width: 2px; */
-  flex-shrink: 0;
-  display: grid;
+  border-radius: 30px;
+  flex: 5;
+  display: flex;
+  flex-direction: column;
   gap: 0px;
   position: relative;
   box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
-  grid-template-rows: 2fr 1fr;
+  /* grid-template-rows: 2fr 1fr; */
+  max-width: 500px;
+  aspect-ratio: 10/13;
   
 }
 .frame-23 {
+  flex: 33%;
   border-style: solid;
   border-color: #000000;
   border-width: 2px 0px 0px 0px;
-  padding: 15px;
+  padding: 2%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  height: 216.67px;
+  /* height: 216.67px; */
+  /* height: 100%; */
   position: relative;
+  width: 100%;
   /* overflow: hidden; */
   /* grid-column: NaN / span undefined;
   grid-row: NaN / span undefined; */
@@ -298,23 +314,29 @@
   color: #000000;
   text-align: center;
   font-family: "Inter-Regular", sans-serif;
-  font-size: 35px;
+  /* font-size: 35px; */
+  font-size: clamp(10px, 1.5vw, 35px);
   font-weight: 400;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 0 0 15px;
+  height: 100%;
 }
 .frame-22 {
+  flex: 67%;
   background: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 0px;
   align-items: center;
   justify-content: center;
-  height: 433.33px;
+  width: 100%;
+  max-height: 67%;
+  /* height: 433.33px; */
   position: relative;
+  box-sizing: border-box;
   /* grid-column: NaN / span undefined;
   grid-row: NaN / span undefined; */
 }
@@ -327,8 +349,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  flex-shrink: 0;
-  width: 500px;
+  /* flex-shrink: 1; */
+  width: 100%;
+  height: auto;
   position: relative;
 }
 .frame-26 {
@@ -337,30 +360,32 @@
   gap: 0px;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  width: 250px;
-  height: 250px;
+  width: 50%;
+  /* flex-shrink: 0; */
+  height: 100%;
+  /* flex-shrink: 1; */
+  /* aspect-ratio: 1; */
   position: relative;
   /* overflow: hidden; */
 }
 .streamline-ultimate-color-weather-sun {
-  padding: 10px;
+  /* padding: 10px; */
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: center;
   justify-content: flex-start;
   align-self: stretch;
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
   position: relative;
   /* overflow: hidden; */
 }
 .group {
+  /* flex-shrink: 0; */
+   width: 200px;
+  min-width: 200px;
+  height: auto;
   flex-shrink: 0;
-  width: 229.17px;
-  height: 229.17px;
-  position: relative;
-  overflow: visible;
 }
 .frame-27 {
   padding: 50px 0px 16px 0px;
@@ -370,18 +395,22 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 250px;
-  height: 250px;
+  /* width: 250px; */
+  height: 100%;
+  width: 50%;
+  /* aspect-ratio: 1; */
   position: relative;
   /* overflow: hidden; */
-  aspect-ratio: 1;
-  right: 10%;
+  /* aspect-ratio: 1; */
+  right: 15%;
 }
 ._20 {
   color: #000000;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
-  font-size: 90px;
+  /* font-size: 90px; */
+  font-size: clamp(30px, 5vw, 90px);
+  width: 50%;
   font-weight: 400;
   position: relative;
   align-self: stretch;
@@ -390,22 +419,26 @@
   justify-content: flex-start;
 }
 .frame-28 {
-  padding: 25px 0px 25px 0px;
+  padding: 10px 0px 0px 0px;
   display: flex;
   flex-direction: row;
+  width: 100%;
+  height: auto;
   gap: 10px;
   align-items: flex-end;
   justify-content: center;
-  align-self: stretch;
-  flex: 1;
+  /* align-self: stretch; */
+  /* flex: 1; */
   position: relative;
   /* overflow: hidden; */
+  /* border: 2px solid #000; */
 }
 ._202 {
   color: #000000;
   text-align: center;
   font-family: "Inter-SemiBold", sans-serif;
-  font-size: 45px;
+  /* font-size: 45px; */
+  font-size: clamp(10px, 2vw, 45px);
   font-weight: 600;
   position: relative;
   display: flex;
@@ -414,12 +447,12 @@
 }
 .other-days {
   padding: 0px 40px 0px 40px;
-  flex: 1;
+  flex: 12;
   display: grid;
-  gap: 50px 110px;
+  gap: 50px 90px;
   position: relative;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(0, 300px));
+  /* grid-template-rows: repeat(2, 1fr); */
 }
 .day-1 {
   background: #ffffff;
@@ -605,7 +638,15 @@
 }
 .img{
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1;
+  /* min-width: 200px; */
+}
+.imgMain{
+  /* position: absolute; */
+   width: 100%;
+  max-width: 300px;
+  height: auto;
+  /* flex-shrink: 0; */
 }
 .city{
   font-size: 30px;
@@ -615,3 +656,15 @@
 .cityName{
   margin: 0;
 }
+/* @media screen and (min-width: 1780px) {
+  .other-days {
+  padding: 0px 40px 0px 40px;
+  flex: 12;
+  display: grid;
+  gap: 50px 110px;
+  position: relative;
+  grid-template-columns: repeat(auto-fit, minmax(0, 300px));
+  /* grid-template-rows: repeat(2, 1fr); 
+}
+} 
+*/
