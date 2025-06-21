@@ -2,6 +2,10 @@
 .slide-16-9-2 * {
   box-sizing: border-box;
 }
+body{
+background-size: cover;
+background-attachment: fixed;
+}
 .slide-16-9-2 {
   padding: 10px 50px 10px 50px;
   display: flex;
@@ -402,7 +406,7 @@
   position: relative;
   /* overflow: hidden; */
   /* aspect-ratio: 1; */
-  right: 15%;
+  right: 10%;
 }
 ._20 {
   color: #000000;
@@ -655,6 +659,12 @@
 }
 .cityName{
   margin: 0;
+  color: #fff;
+   text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
 }
 /* @media screen and (min-width: 1780px) {
   .other-days {

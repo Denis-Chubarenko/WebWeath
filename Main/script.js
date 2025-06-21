@@ -12,6 +12,8 @@ const input = document.getElementById('city-input');
 // Відкриття/закриття списку історії
 btn1.addEventListener('click', function (event) {
   event.stopPropagation();
+  const historyItems = list.querySelectorAll('li');
+  if (historyItems.length === 0) return;
   list.classList.toggle('visible');
   overlay.classList.toggle('visible');
 });
@@ -94,6 +96,8 @@ function searchCity() {
 async function getWeather(lat, lon, cnt) {
   const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${appid}&lang=ua&cnt=${cnt}&units=metric`;
 
+
+
   try {
     const response = await fetch(url);
     if (!response.ok) throw new Error(response.status);
@@ -101,6 +105,27 @@ async function getWeather(lat, lon, cnt) {
     const daily = data.list.filter(item => item.dt_txt.includes("12:00:00"));
     const container = document.querySelector(".other-days");
     container.innerHTML = '';
+    let icon = daily[0].weather[0].icon;
+    console.log(icon);
+    const body = document.body;
+
+    if (icon === "01d" || icon === "02d") {
+      body.style.backgroundImage = 'url("images/1picture.jpg")';
+    } else if (icon === "03d" || icon === "04d") {
+      body.style.backgroundImage = 'url("images/2picture.jpg")';
+    } else if (icon === "09d" || icon === "10d" || icon === "11d") {
+      body.style.backgroundImage = 'url("https://i.pinimg.com/originals/16/9b/c5/169bc52cbcd8d4aca0c9554d68ebb05e.gif")';
+    } else if (icon === "13d" || icon === "13n") {
+      body.style.backgroundImage = 'url("https://i.pinimg.com/originals/36/38/1d/36381d517cd6a6bcd98127f0179baaef.gif")';
+    } else if (icon === "50d" || icon === "50n") {
+      body.style.backgroundImage = 'url("https://i.pinimg.com/originals/1d/1b/33/1d1b336e40de7fd0689afc6561f4e92f.gif")';
+    } else if (icon === "01n" || icon === "02n") {
+      body.style.backgroundImage = 'url("https://i.pinimg.com/originals/41/18/3d/41183d44ebd4c5b4500ec65a9ade4d3f.gif")';
+    } else if (icon === "03n" || icon === "04n") {
+      body.style.backgroundImage = 'url("images/3picture.jpg")';
+    } else if (icon === "09n" || icon === "10n" || icon === "11n") {
+      body.style.backgroundImage = 'url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37d1173b-9edc-4a51-9e62-027da4b64ff1/d9c6kuv-a17c96c2-1263-43dd-a83a-d45ad8317702.gif?token=...")';
+    }
 
     // Локалізація назв міст
     const cityTranslations = {
@@ -203,3 +228,5 @@ function error(e) {
   const defaultLon = 30.5264;
   getWeather(defaultLat, defaultLon, 40);
 }
+
+// localStorage.clear();
